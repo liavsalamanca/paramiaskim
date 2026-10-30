@@ -6,23 +6,23 @@
 <title>Bucaramanga to Ankara</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Sacramento&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Ms+Madi&family=Figtree:wght@400;500;600&display=swap">
 <style>
 /* Layout: one narrow love-letter column — hero names, map with the flight path, two clocks side by side, the counter, then polaroids. */
 :root{
-  --paper:#561226;
-  --card:#6a1a30;
+  --paper:#420f2a;
+  --card:#551836;
   --ink:#fbeaee;
-  --muted:#e2b3be;
-  --rose:#f6a9b8;
-  --wine:#561226;
+  --muted:#e0afc4;
+  --rose:#f3a4c0;
+  --wine:#420f2a;
   --gold:#ecbd73;
-  --land:#74233a;
-  --land-hi:#b4475f;
-  --sea:#480d1e;
-  --line:#80304a;
+  --land:#5e1d3e;
+  --land-hi:#9c3a62;
+  --sea:#360a22;
+  --line:#6f2a4d;
   --f-display:"Young Serif", Georgia, serif;
-  --f-script:"Sacramento", "Snell Roundhand", cursive;
+  --f-script:"Ms Madi", "Snell Roundhand", cursive;
   --f-body:"Figtree", system-ui, sans-serif;
   color-scheme:dark;
 }
@@ -78,7 +78,7 @@ h2{font-family:var(--f-display);font-weight:400;font-size:1.45rem;margin:0;line-
 .counter .label{color:var(--wine);opacity:.75}
 .counter .big{font-family:var(--f-display);font-size:clamp(3.6rem,18vw,5.4rem);line-height:.95;font-variant-numeric:tabular-nums}
 .units{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;max-width:360px}
-.unit{background:rgba(86,18,38,.1);border-radius:14px;padding:10px 4px}
+.unit{background:rgba(66,15,42,.1);border-radius:14px;padding:10px 4px}
 .unit b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.6rem;font-variant-numeric:tabular-nums;line-height:1.1}
 .unit small{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
 .since{display:flex;justify-content:space-around;gap:12px;flex-wrap:wrap;width:100%;font-size:.9rem;opacity:.95}
@@ -212,7 +212,7 @@ const BUC = [-73.1198, 7.1193], ANK = [32.8597, 39.9334];
     svg.append('g').selectAll('path').data(countries).join('path')
       .attr('class', d => 'land' + (d.id === '170' || d.id === '792' ? ' home' : ''))
       .attr('d', path);
-    const line = {type:'LineString',coordinates:[BUC,ANK]};
+    const line = {type:'LineString',coordinates:[ANK,BUC]};
     svg.append('path').attr('class','arc-bg').attr('d', path(line));
     const arc = svg.append('path').attr('class','arc').attr('d', path(line)).attr('id','arcpath');
 
