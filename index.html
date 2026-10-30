@@ -102,6 +102,32 @@ footer p{margin:0;color:var(--muted)}
 .heart{display:inline-block;color:var(--rose);animation:beat 1.6s ease-in-out infinite}
 @keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.15)}}
 @media (prefers-reduced-motion:reduce){.pulse,.heart{animation:none}}
+
+/* Desktop: wider page, map across the top, clocks and counter side by side. */
+@media (min-width:900px){
+  body{font-size:18px}
+  .wrap{max-width:1120px;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:64px 48px;padding-block:72px 96px}
+  header,footer,section[aria-labelledby="map-h"]{grid-column:1/-1}
+  .script{font-size:7rem}
+  footer .script{font-size:3.6rem}
+  h1{font-size:2.6rem}
+  h2{font-size:1.9rem}
+  .sub{max-width:46ch;font-size:1.15rem}
+  .map{border-radius:28px}
+  .distance strong{font-size:2.2rem}
+  .clocks{gap:20px;flex:1}
+  .clock{padding:28px 18px 24px;gap:10px;justify-content:center}
+  .dial{width:170px}
+  .clock .city{font-size:1.45rem}
+  .clock .time{font-size:1.35rem}
+  .clock .who{font-size:2.1rem}
+  .counter{flex:1;justify-content:center;padding:36px 28px;gap:18px}
+  .counter .big{font-size:7.5rem}
+  .units{max-width:440px;gap:12px}
+  .unit{padding:14px 6px}
+  .unit b{font-size:2.2rem}
+  .since{font-size:1rem}
+}
 </style>
 
 <style>body{margin:0}img{max-width:100%}</style>
